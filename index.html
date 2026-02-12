@@ -1,13 +1,73 @@
-<!-- Digitar código HTML (Aqui) -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Senai</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Landing page Senai</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/Senai.jpg" type="image/x-icon">
+
+    <!-- Importação das Fontes (Google fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Link para folha de estilos -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Header (Cabeçalho) -->
+    <header class="header">
+        <nav class="container nav-header">
+            <!-- Logo -->
+            <img src="assets/logos_senai_branco.png" alt="Logo do Senai" class="logo">
+            
+            <!-- Menu hamburguer -->
+            <button class="btn-menu">&#9776;</button>
+
+
+            <!-- Menu (Com links) -->
+            <ul class="menu">
+                <li><a href="#">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#endereco">Endereço</a></li>
+                <li><a href="#" class="botao">Contate-nos</a></li>
+            </ul>
+        </nav>
+    </header>
     
+    <!-- Main (Principal) -->
+    <main>
+        <section class="banner">
+            <div>
+                <div class="container conteudo-banner">
+                    <h1>Cursos Técnicos SENAI</h1>
+                    <div class="linha-destaque"></div>
+                    <p class="subtitulo">Formação profissional de excelência</p>
+                    <img src="assets/mouse-down.png" alt="figura do mouse" class="ilustracao">
+            </div>
+
+        </section>
+
+        <section class="sobre" id="sobre">
+            <div class="container">
+                <h2 class="titulo-secao">Sobre os projetos</h2>
+            
+                <div class="conteudo-sobre">
+                    <img src="assets/imagem-seção-sobre.jpg" alt="alunos em aula" class="imagem-sobre">
+                    <div class="texto-sobre">
+                        <span class="destaque">Participantes</span>
+                        <h3>Mais de 80 alunos organizados em 16 grupos</h3>
+                        <p> O SENAI oferece cursos técnicos que combinam teoria e prática, preparando os alunos para os desafios do mercado de trabalho. Com uma metodologia inovadora e professores altamente qualificados.
+                        </p>
+                    </div>
+            </div>
+        </section>
+    </main>
+    <!-- Chamada do Java Script -->
+    <script src="js/efeito.js"></script>
+
+
 </body>
 </html>

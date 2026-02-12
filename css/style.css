@@ -4,6 +4,220 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
-/* Continuar digitação código CSS (deste ponto) */
+/* Variáveis do TEMA (Cores) */
+
+:root {
+  --cor-primaria: #F9003D; 
+  --cor-secundaria: #a259f7;
+  --cor-destaque: #ffaf00;
+  --fundo-escuro: #080324;
+  --texto-claro: #FFF;
+  --texto-cinza: #c7bab3;
+}
+
+/* Estilos gerais */
+body {
+  background-color: var(--fundo-escuro);
+  color: var(--texto-claro);
+  font-family: 'Bebas Neue', sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+}
+address{
+  /* Remove o itálico padrão da tag address */
+  font-style: normal;
+}
+.container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+/* Header (Cabeçalho) */
+header {
+  background-color: var(--cor-primaria);
+  position: fixed; /* mantem header no topo fixo */
+  width: 100%;
+  z-index: 10;
+  padding: 0.5rem 0;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  height: 40px;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 1.5rem; /* Espaça o links do menu */
+  list-style: none; /* Retira a bolinha da lista */
+}
+
+.menu a {
+  color: var(--texto-claro);
+  text-decoration: none; /* Retira o Undeline do link */
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: color 0.3s ease; /* Transição suave para a cor */
+}
+.menu a:hover {
+  color: var(--cor-destaque); /* Cor de destaque ao passar o mouse */
+}
+
+.btn-menu {
+  display: none; /* Esconde o menu hamburguer (telas grandes */
+}
+
+
+
+.botao {
+  background-color: var(--cor-secundaria) !important; /* !important para garantir que a cor seja aplicada mesmo que haja outras regras conflitantes */
+  color: var(--texto-claro);  
+  padding: 0.6rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+.botao:hover {
+  background: linear-gradient(135deg, var(--cor-secundaria), var(--cor-destaque));
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra */
+  transform: translateY(-2px) scale(1.05); /* Efeito de elevação*/
+}
+
+/*Banner principal*/
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+  url("../assets//imagem-fundo-banner.jpg"); 
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.conteudo-banner h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.linha.destaque {
+  width: 400px;
+  height: 2px;
+  background-color: var(--cor-destaque);
+  margin: 1rem auto;
+}
+
+.subtitulo {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--texto-cinza);
+}
+.mouse {
+  width: 60px;
+  margin-top: 2rem;
+  opacity: 0.8;
+}
+
+/* Seção Sobre */
+.sobre {
+  background-color: #181012;
+  padding: 4rem 0;
+
+}
+.titulo-secao {
+  color: var(--cor-primaria);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+/* Container para organizar imagem e texto lado a lado*/
+.conteudo-sobre {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
+}
+.imagem-sobre {
+  width: 45%;
+  border-radius: 10px;
+  min-width: 300px; /* Garante que a imagem não fique muito pequena em telas menores */
+  flex: 1;
+}
+.texto-sobre {
+  width: 50%;
+  min-width: 300px;
+  flex: 1;
+}
+.destaque {
+  color: var(--cor-destaque);
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+.texto-sobre h3 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+.texto-sobre p {
+  font-size: 1.2rem;
+  color: var(--texto-cinza);
+}
+
+
+/* ________________________________________________________________________ */
+/* Responsividade (Tamanho de telas diferentes*/
+
+/* Regra para quando a tela for menor que 768px */
+@media (max-width: 768px) {
+  .nav-header {
+    justify-content: center;
+  }
+  .menu {
+    padding-top: 0;
+  }
+  .conteudo-sobre, .conteudo-endereco {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .imagem-sobre, .texto-sobre {
+    width: 100%;
+  }
+
+  /* ____________________________________________________ */
+  /* Programação (Exclsuiva para menu hamburguer)*/
+  .btn-menu {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--texto-claro);
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+  .nav-header {
+    justify-content: space-between;
+  }
+  .menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+  }
+  .menu.aberto {
+    display: flex;
+  }
+}
