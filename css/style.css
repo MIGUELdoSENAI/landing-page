@@ -176,6 +176,68 @@ header {
   font-size: 1.2rem;
   color: var(--texto-cinza);
 }
+/* Cards (Estilização) */
+.info {
+  padding: 4rem 0;
+  text-align: center;
+}
+.cards-info{
+  list-style: none; /* Remove os marcadores (Bolinhas) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Permite o texto quebrar p/ linha abaixo*/
+}
+.card {
+  background-color: #241a1c;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+.card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--cor-destaque);
+}
+.card p {
+  background-color: var(--fundo-escuro);
+  padding: 1rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+/* Seção (Endereço) */
+.endereco {
+  padding: 4rem 0;
+}
+.conteudo-endereco {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
+  margin-top: 1rem;
+}
+.texto-endereco {
+  font-size: 1.3rem;
+  line-height: 1.8; /* Aumenta o espaçament entre linhas */
+  flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
+}
+.mapa {
+  width: 350px;
+  border-radius: 10px;
+  /*box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);*/ /* Sombra para dar destaque */
+  box-shadow: 20px 20px 8px rgba(255, 255, 255, 0.4);
+}
+.footer {
+  background-color: #F9003D;
+  text-align: center;
+  padding: 0.3rem 0;
+  font-size: 1.4rem;
+}
+
 
 
 /* ________________________________________________________________________ */
@@ -221,3 +283,13 @@ header {
     display: flex;
   }
 }
+
+/* Reduz o tamanho das fontes para melhor legibilidade */
+.conteudo-banner h1 {font-size: 3.5rem;}
+.subtitulo {font-size: 1.2rem;}
+.titulo-secao {font-size: 2.5rem;}
+.texto-sobre h3 {font-size: 2rem;}
+.texto-sobre p {font-size: 1rem;}
+.card h3 {font-size: 1.5rem;}
+.card p {font-size: 1.2rem;}  
+.conteudo-endereco {font-size: 1rem;}
