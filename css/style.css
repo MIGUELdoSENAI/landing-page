@@ -114,7 +114,7 @@ header {
   margin-bottom: 1rem;
 }
 
-.linha.destaque {
+.linha-destaque {
   width: 400px;
   height: 2px;
   background-color: var(--cor-destaque);
